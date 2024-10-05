@@ -34,6 +34,7 @@ urlpatterns = [
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 
     path('', include('apps.loxury.urls')),
+    path('', include('apps.common.urls')),
     path('contact/', include('apps.contact.urls')),
     path('user/', include('apps.user.urls')),
 ]
