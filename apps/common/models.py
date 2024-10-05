@@ -11,5 +11,8 @@ class BaseModel(models.Model):
 
 
 class SubEmail(BaseModel):
-    email = models.EmailField()
+    sub_email = models.EmailField()
+
+    def __str__(self):
+        return f"{self.id}-{self.sub_email}"
     
