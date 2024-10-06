@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Loxury was developed by EduVector!</title>
+<title>Loxury</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -32,7 +32,7 @@
                     <div class="col-lg-3">
                         <div class="full">
                             <div class="logo">
-                                <a href="/"><img src="{% static '' %}images/logo.png" alt="HomeImg" /></a>
+                                <a href="{% url 'home' %}"><img src="{% static '' %}images/logo.png" alt="HomeImg"/></a>
                             </div>
                         </div>
                     </div>
@@ -40,12 +40,14 @@
                         <div class="full">
                             <div class="top_section_info">
                                 <ul>
-                                    <li>Contact Us: <img src="{% static '' %}images/i1.png" alt="contactimg" /> <a href="/">( +71
+                                    <li>Contact Us: <img src="{% static '' %}images/i1.png" alt="contactimg" /> <a
+                                            href="/">( +71
                                             7569834142
                                             )</a></li>
-                                    <li><img src="{% static '' %}images/i2.png" alt="phone.img"/> <a
+                                    <li><img src="{% static '' %}images/i2.png" alt="phoneimg"/> <a
                                             href="/">honey@gmail.com</a></li>
-                                    <li><img src="{% static '' %}images/i3.png" alt="emailimg" /> <a href="{% url 'home' %}">104 New york ,
+                                    <li><img src="{% static '' %}images/i3.png" alt="emailImg"/> <a
+                                            href="{% url 'home' %}">104 New york ,
                                             USA</a></li>
                                 </ul>
                             </div>
@@ -95,9 +97,9 @@
                                 </nav>
                             </div>
                             <div class="search_bar">
-                                <form method="post" action="#send_search">
+                                <form method="post">
                                     {% csrf_token %}
-                                    <input type="text" class="search_field" name="search" placeholder="Search" />
+                                    <input type="text" class="search_field" name="search" placeholder="Search"/>
                                     <button class="search_button" type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
@@ -115,7 +117,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-12">
-                    <a href="{% url 'home' %}"><img class="img-responsive" src="{% static '' %}images/logo_footer.png" alt="#" /></a>
+                    <a href="{% url 'home' %}"><img class="img-responsive" src="{% static '' %}images/logo_footer.png"
+                            alt="logo_footer" /></a>
                 </div>
 
                 <div class="col-md-3 col-sm-12">
@@ -124,7 +127,7 @@
                     </div>
                     <div class="address_infor">
                         <p>
-                            <span class="icon"><img src="{% static '' %}images/location_icon.png" alt="#" /></span>
+                            <span class="icon"><img src="{% static '' %}images/location_icon.png" alt="location_icon" /></span>
                             <span class="addrs">104 New York , USA</span>
                         </p>
                     </div>
@@ -136,10 +139,13 @@
                     </div>
                     <div class="social_icon">
                         <ul>
-                            <li><a href="https://www.facebook.com/"><img src="{% static '' %}images/fb.png" alt="#" /></a></li>
-                            <li><a href="https://www.x.com/"><img src="{% static '' %}images/tw.png" alt="#" /></a></li>
-                            <li><a href="https://www.google.com/"><img src="{% static '' %}images/gp.png" alt="#" /></a></li>
-                            <li><a href="https://www.linkedin.com/"><img src="{% static '' %}images/in.png" alt="#" /></a></li>
+                            <li><a href="https://www.facebook.com/"><img src="{% static '' %}images/fb.png"
+                                        alt="fb" /></a></li>
+                            <li><a href="https://www.x.com/"><img src="{% static '' %}images/tw.png" alt="x"/></a></li>
+                            <li><a href="https://www.google.com/"><img src="{% static '' %}images/gp.png" alt="google"/></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/"><img src="{% static '' %}images/in.png"
+                                        alt="linkedin"/></a></li>
                         </ul>
                     </div>
                 </div>
@@ -149,7 +155,7 @@
                         <h3>Newsletter</h3>
                     </div>
                     <div class="email_address_bottom">
-                        <form method="post" action="#send_sub_email">
+                        <form method="post">
                             {% csrf_token %}
                             <fieldset>
                                 <div class="field_email">
@@ -167,7 +173,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p>© 2019 All Rights Reserved. <a href="https://t.me/vectorzafar/">Free html Templates</a></p>
+                    <p>© 2024 All Rights Reserved. <a href="https://t.me/vectorzafar/">Free html Templates</a></p>
                 </div>
             </div>
         </div>

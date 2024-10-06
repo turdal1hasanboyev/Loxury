@@ -82,42 +82,14 @@
          </div>
       </div>
       <div class="row product_section">
+         {% for i in loxury %}
          <div class="col-md-4">
             <div class="full product_blog margin_top_30">
-               <img src="images/pro1.jpg" alt="#" />
-               <h3><span style="color: #72dd78 !important;">$100</span> Diamond ring</h3>
+               <img src="{{ i.image.url }}" alt="img"/>
+               <h3><span style="color: #72dd78 !important;">${{ i.price }}</span>{{ i.name }}</h3>
             </div>
          </div>
-         <div class="col-md-4">
-            <div class="full product_blog margin_top_30">
-               <img src="images/pro2.jpg" alt="#" />
-               <h3><span style="color: #72dd78 !important;">$100</span> Diamond ring</h3>
-            </div>
-         </div>
-         <div class="col-md-4">
-            <div class="full product_blog margin_top_30">
-               <img src="images/pro3.jpg" alt="#" />
-               <h3><span style="color: #72dd78 !important;">$100</span> Diamond ring</h3>
-            </div>
-         </div>
-         <div class="col-md-4">
-            <div class="full product_blog margin_top_30">
-               <img src="images/pro3.jpg" alt="#" />
-               <h3><span style="color: #72dd78 !important;">$100</span> Diamond ring</h3>
-            </div>
-         </div>
-         <div class="col-md-4">
-            <div class="full product_blog margin_top_30">
-               <img src="images/pro4.jpg" alt="#" />
-               <h3><span style="color: #72dd78 !important;">$100</span> Diamond ring</h3>
-            </div>
-         </div>
-         <div class="col-md-4">
-            <div class="full product_blog margin_top_30">
-               <img src="images/pro5.jpg" alt="#" />
-               <h3><span style="color: #72dd78 !important;">$100</span> Diamond ring</h3>
-            </div>
-         </div>
+         {% endfor %}
       </div>
    </div>
 </section>
@@ -155,7 +127,7 @@
                   </div>
                </div>
             </div>
-            <img class="img-responsive" src="images/bg1.jpg" alt="#" />
+            <img class="img-responsive" src="{% static '' %}images/bg1.jpg" alt="img-responsive"/>
          </div>
       </div>
    </div>
@@ -176,12 +148,13 @@
                <div class="row">
                   <div class="col-md-6">
                      <div class="gold_con">
-                        <img src="images/gold_c.png" alt="#" />
+                        <img src="{% static '' %}images/gold_c.png" alt="gold_c" />
                      </div>
                   </div>
                   <div class="col-md-6">
                      <div class="form_cont">
-                        <form action="index.html">
+                        <form method="post">
+                           {% csrf_token %}
                            <fieldset>
                               <div class="field">
                                  <input type="text" name="name" placeholder="Name" />
@@ -190,13 +163,13 @@
                                  <input type="email" name="email" placeholder="Email" />
                               </div>
                               <div class="field">
-                                 <input type="text" name="phone" placeholder="Phone" />
+                                 <input type="text" name="phone_number" placeholder="Phone" />
                               </div>
                               <div class="field">
-                                 <textarea placeholder="Message"></textarea>
+                                 <textarea name="message" placeholder="Message"></textarea>
                               </div>
                               <div class="field center">
-                                 <button>Send</button>
+                                 <button type="submit">Send</button>
                            </fieldset>
                         </form>
                      </div>

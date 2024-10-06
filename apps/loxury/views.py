@@ -1,7 +1,8 @@
 from django.shortcuts import render
 
-from apps.common.models import SubEmail
 from .models import Loxury
+from apps.common.models import SubEmail
+from apps.contact.models import Contact
 
 
 def shop(request):
@@ -53,6 +54,19 @@ def home(request):
 
         SubEmail.objects.create(
             sub_email=sub_email,
+        )
+
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone_number = request.POST.get('phone_number')
+        message = request.POST.get('message')
+        
+        Contact.objects.create(
+            name=name,
+            email=email,
+            phone_number=phone_number,
+            message=message,
         )
 
     loxury = Loxury.objects.filter(is_active=True).order_by('-id')
