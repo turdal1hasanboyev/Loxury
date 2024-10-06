@@ -118,7 +118,7 @@ DATABASES = {
         'NAME': 'loxury',
         'USER': 'loxury',
         'PASSWORD': 'loxury',
-        'HOST': 'localhost', # '127.0.0.1'
+        'HOST': 'localhost', #'127.0.0.1'
         'PORT': '5432',
     }
 }

@@ -1,7 +1,6 @@
 from django.db import models
 
 from django.contrib.auth.models import AbstractUser
-
 from ckeditor.fields import RichTextField
 
 from apps.common.models import BaseModel
@@ -14,7 +13,7 @@ class User(BaseModel, AbstractUser):
     )
 
     description = RichTextField(null=True, blank=True)
-    image = models.ImageField(upload_to='avatars/', null=True, blank=True)
+    image = models.ImageField(upload_to='avatars/', null=True, blank=True, default='images/default-image.jpg')
     phone_number = models.CharField(max_length=225, null=True, blank=True)
     gender = models.CharField(choices=GENDER, max_length=225, null=True, blank=True)
     birth_date = models.DateField(null=True, blank=True)

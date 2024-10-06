@@ -45,7 +45,7 @@ def about(request):
 
     return render(request=request, template_name='about.html')
 
-def home_page(request):
+def home(request):
     search = request.POST.get('search')
 
     if request.method == 'POST':
