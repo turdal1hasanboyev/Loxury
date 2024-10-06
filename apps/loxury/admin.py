@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Loxury
+from . import models
 
 
-admin.site.register(Loxury)
+admin.site.register(models.Loxury)
