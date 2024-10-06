@@ -35,8 +35,8 @@ urlpatterns = [
 
     path('', include('apps.loxury.urls')),
     path('', include('apps.common.urls')),
-    path('contact/', include('apps.contact.urls')),
-    path('user/', include('apps.user.urls')),
+    path('', include('apps.contact.urls')),
+    path('', include('apps.user.urls')),
 ]
 
 handler404 = page_not_found_view
